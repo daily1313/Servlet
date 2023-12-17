@@ -48,6 +48,16 @@
 
 ```
 
+### tomcat의 war 파일 적용
+
+- 압축을 푼 프로젝트 확인을 위해 localhost:8080/url을 쳐서 들어갔지만 404 Error 뜨는 경우
+- apache-tomcat-${version}/conf로 들어가 server.xml 편집 
+```
+<Host>
+<Context docBase="Servlet" path="/" reloadable="false" />
+<Host>
+```
+
 ### web.xml Servlet 등록
 
 ```
