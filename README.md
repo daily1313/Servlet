@@ -28,6 +28,26 @@
 - mvn install: 저장소에 만들었던 결과물 파일을 복사해 놓는 과정
 - -DskipTest Option: 테스트를 진행 여부에 대한 옵션
 
+### Tomcat Server에 배포
+- 패키징된 war 파일 복사
+- %TOMCAT_HOME%₩bin₩startup.sh
+
+### Tomcat Manager 이용
+- Tomcat Server에 Web Application을 배포하기 위한 관리도구
+- %TOMCAT_HOME%₩conf₩tomcat-users.xml 수정
+
+```
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+
+<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status" />
+<user username="deployer" password="depleyer" roles="manager-script" />
+<user username="tomcat" password="tomcat" roles="manager-gui" />
+
+```
+
 ### web.xml Servlet 등록
 
 ```
