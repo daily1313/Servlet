@@ -26,6 +26,7 @@
 - mvn compile: Java code를 build해서 class bytecode로 만들어주는 과정 (build, target/classes path에 dir 생성)
 - mvn package: 만들었던 결과물의 파일을 하나의 단일 압축 파일로 만들어주는 것
 - mvn install: 저장소에 만들었던 결과물 파일을 복사해 놓는 과정
+- -DskipTest Option: 테스트를 진행 여부에 대한 옵션
 
 ### web.xml Servlet 등록
 
