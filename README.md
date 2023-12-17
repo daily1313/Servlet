@@ -80,3 +80,23 @@
 
 - @WebServlet Annotation 
   - web.xml의 설정 작업을 한꺼번에 해주는 역할
+
+### [Maven 애플리케이션을 Tomcat 서버에 배포하는 절차]
+
+- mvn clean build compile
+
+<img width="600" alt="스크린샷 2023-12-17 오후 3 21 09" src="https://github.com/daily1313/algorithm/assets/88074556/46002737-ad04-4db3-bff3-7905cea61c38">
+
+- 패키징된 war 파일 복사
+
+<img width="600" alt="스크린샷 2023-12-17 오후 3 23 13" src="https://github.com/daily1313/algorithm/assets/88074556/224e3fea-4581-4fa1-bbae-97c5ff07cb86">
+
+- bin 경로에서 ./startup.sh 명령어로 tomcat 실행 (종료: ./shutdown.sh)
+
+<img width="600" alt="스크린샷 2023-12-17 오후 3 26 20" src="https://github.com/daily1313/algorithm/assets/88074556/03a13bec-7dc8-4f0b-a129-f9fd5c42c69a">
+
+- Tomcat Manager를 이용할 경우 /apache-tomcat-9.0.83/conf 경로의 tomcat-users.xml 파일 수정
+
+<img width="600" alt="스크린샷 2023-12-17 오후 5 27 04" src="https://github.com/daily1313/algorithm/assets/88074556/c5eed1d3-408a-4650-879d-0ec9461ebcd9">
+
+<img width="600" alt="스크린샷 2023-12-17 오후 5 14 00" src="https://github.com/daily1313/algorithm/assets/88074556/7a1bd9e6-a112-433c-ad0f-6df89f090388">
