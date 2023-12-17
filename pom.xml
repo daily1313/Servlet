@@ -27,15 +27,25 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.11.0</version>
         <configuration>
-          <source>18</source> <!-- Your Java version -->
-          <target>18</target> <!-- Your Java version -->
+          <source>18</source>
+          <target>18</target>
         </configuration>
       </plugin>
     </plugins>
-    <finalName>Servlet</finalName>
+<!--    <finalName>Servlet</finalName>-->
   </build>
   <properties>
     <maven.compiler.source>18</maven.compiler.source>
